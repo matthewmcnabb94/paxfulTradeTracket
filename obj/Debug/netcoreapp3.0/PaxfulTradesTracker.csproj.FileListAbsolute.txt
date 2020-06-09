@@ -1,0 +1,13 @@
+C:\Users\matth\source\repos\PaxfulTradesTracker\obj\Debug\netcoreapp3.0\PaxfulTradesTracker.csprojAssemblyReference.cache
+C:\Users\matth\source\repos\PaxfulTradesTracker\obj\Debug\netcoreapp3.0\PaxfulTradesTracker.AssemblyInfoInputs.cache
+C:\Users\matth\source\repos\PaxfulTradesTracker\obj\Debug\netcoreapp3.0\PaxfulTradesTracker.AssemblyInfo.cs
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\PaxfulTradesTracker.exe
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\PaxfulTradesTracker.deps.json
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\PaxfulTradesTracker.runtimeconfig.json
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\PaxfulTradesTracker.runtimeconfig.dev.json
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\PaxfulTradesTracker.dll
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\PaxfulTradesTracker.pdb
+C:\Users\matth\source\repos\PaxfulTradesTracker\obj\Debug\netcoreapp3.0\PaxfulTradesTracker.dll
+C:\Users\matth\source\repos\PaxfulTradesTracker\obj\Debug\netcoreapp3.0\PaxfulTradesTracker.pdb
+C:\Users\matth\source\repos\PaxfulTradesTracker\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\matth\source\repos\PaxfulTradesTracker\obj\Debug\netcoreapp3.0\PaxfulTradesTracker.csproj.CopyComplete
