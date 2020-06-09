@@ -47,6 +47,10 @@ namespace PaxfulTradesTracker
             Console.WriteLine("Total redeemed = £" + total);
             Console.WriteLine("Total BTC = " + totalBTC);
             Console.WriteLine("Total GBP = £" + totalPound);
+            Console.WriteLine("Average price = " + Math.Round(totalPound / total, 3));
+
+            
+
 
 
         }
