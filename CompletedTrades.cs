@@ -34,5 +34,7 @@ namespace PaxfulTradesTracker
         
         public string completed_at { get; set; }
 
+        public string ended_at { get; set; }
+
     }
 }

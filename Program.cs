@@ -49,7 +49,9 @@ namespace PaxfulTradesTracker
             Console.WriteLine("Total GBP = £" + totalPound);
             Console.WriteLine("Average price = " + Math.Round(totalPound / total, 3));
 
-            
+            Console.ReadKey();
+
+
 
 
 
@@ -144,11 +146,15 @@ namespace PaxfulTradesTracker
             
 
             string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
-            //Console.WriteLine("Date checking is: " + dateNow);
+            Console.WriteLine("Date checking is: " + dateNow);
 
 
             foreach (var num in steamUser.data.trades)
             {
+
+                //Console.WriteLine("(1) Payment method name: " + num.payment_method_name);
+                //Console.WriteLine("(2) Status: " + num.status);
+                //Console.WriteLine("(3) Completed at: " + num.completed_at);
 
                 if (num.payment_method_name == "Steam Wallet Gift Card" && num.status == "successful" && num.completed_at.Contains(dateNow))
                 {
@@ -284,9 +290,14 @@ namespace PaxfulTradesTracker
 
                     var indexOfBefore = num.text.ToString().IndexOf("ing") +3;
 
-                   //Console.WriteLine("Index positon before: " + indexOfBefore);
+                    //Console.WriteLine("Index positon before: " + indexOfBefore);
 
-                    double TotalRedeemed = Int16.Parse(num.text.ToString().Substring(indexOfBefore,indexOfC - indexOfBefore));
+
+                    //Console.WriteLine("Total redeemed is: "+ num.text.ToString().Substring(indexOfBefore, indexOfC - indexOfBefore));
+                    String totalR = num.text.ToString().Substring(indexOfBefore, indexOfC - indexOfBefore).Trim();
+                    //Console.WriteLine("Length is: "+ totalR.Length);
+
+                    double TotalRedeemed = Convert.ToInt64(Convert.ToDouble(totalR));
 
 
                     double currencyRate = newCurrency(currencyCode);
@@ -303,6 +314,8 @@ namespace PaxfulTradesTracker
 
 
                     double TotalBTC = double.Parse(num.text.ToString().Substring(indexBeforeTotalBTC, indexAfterTotalBTC - indexBeforeTotalBTC), System.Globalization.CultureInfo.InvariantCulture);
+
+                    //Console.WriteLine("Total BTC: " + TotalBTC);
 
                     
 
