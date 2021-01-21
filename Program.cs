@@ -69,8 +69,8 @@ namespace PaxfulTradesTracker
             DateTime dateAndTime = DateTime.Now;
             var date = dateAndTime.ToString("dd.MM.yyyy");
             //Variables apiKey, secret are used for hmac generation, you need to use your secret and api key from user settings
-            var apiKey = "86rKRjTrPXR4AprJeXQ4VK5sLgE3EJOE";
-            var secret = "WZhaAu6hE8TBrS3kM9KIJ29UH0YxulVN";
+            var apiKey = "LBwT6TBdxODSr1Ai6IPEGTi4ulZljjfw";
+            var secret = "xwwynKwwgbj4TYwuUgA1SOIgdHlAEPKG";
             //Variables offerHash, margin are used for this example request, those variables should contain your information
             var page = 1;
             //var margin = 50;
@@ -209,15 +209,17 @@ namespace PaxfulTradesTracker
             //Generate today's date in the format of dd.MM.yyyy
             DateTime dateAndTime = DateTime.Now;
             var date = dateAndTime.ToString("dd.MM.yyyy");
+
             //Variables apiKey, secret are used for hmac generation, you need to use your secret and api key from user settings
-            var apiKey = "86rKRjTrPXR4AprJeXQ4VK5sLgE3EJOE";
-            var secret = "WZhaAu6hE8TBrS3kM9KIJ29UH0YxulVN";
+            var apiKey = "LBwT6TBdxODSr1Ai6IPEGTi4ulZljjfw";
+            var secret = "xwwynKwwgbj4TYwuUgA1SOIgdHlAEPKG";
             //Variables offerHash, margin are used for this example request, those variables should contain your information
             var trade_hash = th;
             //var margin = 50;
             //Variables body and theKey is used for request body, theKey holds generate hmac
             var body = "apikey=" + apiKey + "&nonce=" + date + "&trade_hash=" + trade_hash; //+ "&margin=" + margin;
             var theKey = "&apiseal=" + hmac.GenerateHMAC(secret, body);
+            
 
             // Create a request using a URL that can receive a post.
             WebRequest request = WebRequest.Create("https://paxful.com/api/trade-chat/get");
@@ -407,8 +409,8 @@ namespace PaxfulTradesTracker
                 DateTime dateAndTime = DateTime.Now;
                 var date = dateAndTime.ToString("dd.MM.yyyy");
 
-                var apiKey = "86rKRjTrPXR4AprJeXQ4VK5sLgE3EJOE";
-                var secret = "WZhaAu6hE8TBrS3kM9KIJ29UH0YxulVN";
+                var apiKey = "LBwT6TBdxODSr1Ai6IPEGTi4ulZljjfw";
+                var secret = "xwwynKwwgbj4TYwuUgA1SOIgdHlAEPKG";
 
                 //var offer_hash = "xPzozn7QBoB";
                 //var margin = marginRate;
@@ -488,6 +490,8 @@ namespace PaxfulTradesTracker
         private static double DeserialiseJSONTradeStatusCurrencyCode(string strJSON, string currencyCode)
         {
 
+            
+
 
             var currencyJSON = JsonConvert.DeserializeObject<CurrencyNew>(strJSON);
 
@@ -504,7 +508,7 @@ namespace PaxfulTradesTracker
             {
                 if (rate.Value.Code.Equals(currencyCode))
                 {
-                    currency = rate.Value.RateUsd;
+                    currency = Convert.ToDouble(rate.Value.RateUsd);
                     //Console.WriteLine("Curency code did match API, rate is: /////////////////////////////////////////////////////////////////////////////// " + currency);
 
                 }

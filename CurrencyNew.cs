@@ -5,18 +5,17 @@ using System.Text;
 
 namespace PaxfulTradesTracker
 {
-    class CurrencyNew
+    public partial class CurrencyNew
     {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("timestamp")]
+        public long Timestamp { get; set; }
+
         [JsonProperty("data")]
         public Dictionary<string, Datum> Data { get; set; }
     }
-
-
-
-
-
-
-
 
     public partial class Datum
     {
@@ -34,5 +33,9 @@ namespace PaxfulTradesTracker
 
         [JsonProperty("copy_from_fiat_currency_id")]
         public long? CopyFromFiatCurrencyId { get; set; }
+
+        [JsonProperty("min_trade_amount_usd")]
+        public string MinTradeAmountUsd { get; set; }
     }
 }
+
